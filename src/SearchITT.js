@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Search ITT
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       nbytes
 // @match        *://arhivach.org/*
@@ -30,7 +30,7 @@
         if(!searchState){
             var query = prompt('Что ищем?', "");
             if(query!==""){
-                searched = Array.prototype.slice.call(document.querySelectorAll('.post_comment_body')).filter((x)=>{ return x.innerText.includes(query)});
+                searched = Array.prototype.slice.call(document.querySelectorAll('.post_comment_body')).filter((x)=>{ return x.innerText.includes(query)}).reverse();
                 console.log(searched);
                 if(prev){
                     prev.style.border = "";
@@ -57,4 +57,5 @@
     }
     var body = document.body;
     body.appendChild(div);
+    // Your code here...
 })();
