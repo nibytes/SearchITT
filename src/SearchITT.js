@@ -10,7 +10,7 @@
 
 (function() {
     'use strict';
-    var css = ".search-button {position: fixed;width: 250px;height: 39px;background: #fafafa;top: 0px;display: block;z-index: 20000;left: 40%;text-align: center;cursor: pointer;}",
+    var css = ".search-button {position: fixed;width: 250px;height: 23px;background: #fafafa;top: 40%;display: block;z-index: 20000;left: -115px;text-align: center;cursor: pointer;-webkit-transform: rotate(90deg);transform: rotate(90deg);border: 2px solid #ef5b06;}",
         head = document.head || document.getElementsByTagName('head')[0],
         style = document.createElement('style');
     style.type = 'text/css';
