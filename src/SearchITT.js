@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Search ITT
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       nbytes
 // @match        *://arhivach.org/*
@@ -37,6 +37,7 @@
                 }
                 prev = searched.pop()
                 prev.style.border = "3px solid red";
+                prev.parentElement.style.display="block"
                 window.scrollTo(0, prev.offsetTop);
                 div.innerText = "Следующий";
                 searchState = true;
